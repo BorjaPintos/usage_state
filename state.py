@@ -3,7 +3,7 @@ from hurry.filesize import size
 
 memory = dict(psutil.virtual_memory()._asdict())
 disk = dict(psutil.disk_usage("/")._asdict())
-cpu = psutil.cpu_percent()
+cpu = psutil.cpu_percent(percpu=True, interval=1)
 
 
 state = {}
